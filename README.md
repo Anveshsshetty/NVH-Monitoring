@@ -36,7 +36,7 @@
   - Breadboard, jumper wires, USB power supply (5 V)
   
   **Software and IDE**
-  - Thonny IDE (recommended) or Visual Studio Code with MicroPython plugins  
+  - Thonny IDE   
   - MicroPython firmware for Raspberry Pi Pico W  
   - MicroPython libraries: MPU6050 driver (`imu.py`), SH1106 driver (`sh1106.py`), `urequests`  
   - ThingSpeak account (for telemetry)  
@@ -68,19 +68,6 @@
   | Pin 38              | GND          | Common Ground       | Shared ground for all modules |
   | Pin 40              | 5V           | 5V Power Rail       | If any module requires 5V |
   
-  
-  ### ASCII schematic
-  Pico W
-    GP0 ---- SDA ---- MPU6050
-    GP1 ---- SCL ---- MPU6050
-    GP2 ---- SDA ---- SH1106
-    GP3 ---- SCL ---- SH1106
-    GP20 --- OUT ----|> Buzzer (use transistor if needed)
-    GP26 --- A0 ---- Sound Sensor (analog ADC)
-    GP31 --- (220Ω) ---|> LED --- GND
-    3.3V ----- VCC ---- MPU6050, SH1106, Sound Sensor, Buzzer VCC
-    GND  ----- GND ---- All modules
-    
   
   **Hardware notes**
   - If MPU6050 or SH1106 modules do not include pull-ups, add 4.7 kΩ pull‑ups on SDA and SCL.  
