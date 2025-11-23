@@ -6,8 +6,8 @@ from imu import MPU6050 #vibration detection
 import sh1106 #Oled
 
 #Wi-Fi credentials
-ssid = "vivo"
-password = ""
+ssid = "YOUR_WIFI_SSID"
+password = "YOUR_WIFI_PASSWORD"
 
 #Connect to Wi-Fi
 wlan = network.WLAN(network.STA_IF)
@@ -38,13 +38,13 @@ buzzer = Pin(15, Pin.OUT)
 alert = Pin(16, Pin.OUT)
 
 #Telegram
-TOKEN = "8388444131:AAGLlI4S5k30qgh03xzySr5pXN4ji5ag4h4"
-CHAT_ID = "7672587139"
+TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+CHAT_ID = "YOUR_CHAT_ID"
 MESSAGE1 = "🚨 Abnormal vibration detected!"
 MESSAGE2 = "🚨 Abnormal Noise detected!"
 
 #ThingSpeak setup
-THINGSPEAK_API_KEY = "7TMJ4E1MCZB76SI2"
+THINGSPEAK_API_KEY = "YOUR_THINGSPEAK_API_KEY"
 THINGSPEAK_URL = "https://api.thingspeak.com/update"
 
 #Thresholds
