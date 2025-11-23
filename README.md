@@ -21,7 +21,12 @@ abnormal or hazardous conditions
 | Pin 5               | SCL          | SH1106 OLED       | I2C Clock line               |
 | Pin 20              | OUT          | Buzzer            | Digital output control       |
 | Pin 21              | A0           | Sound Sensor      | Analog input                 |
-| Pin 31              | Anode        | Red LED           | Requires series resistor     |
-| Pin 36              | 3.3V VCC     | Buzzer            | Power supply for buzzer      |
+| Pin 31              | Anode        | Red LED           | Alert Led                    |
+| Pin 36              | 3.3V         | Buzzer            | Power supply for buzzer      |
 | Pin 38              | GND          | Common Ground     | Shared ground for all modules|
-| Pin 40              | 5V VCC       | Power Rail        | Supply for 5V peripherals    |
+| Pin 40              | 5V           | Power Rail        | Supply for 5V peripherals    |
+
+## IDE
+Thonny IDE, Using micropython
+
+#
