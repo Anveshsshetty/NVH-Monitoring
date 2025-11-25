@@ -220,6 +220,52 @@
   
       sleep(1)
 ```
+## Threshold for acclertion and noise
+  Since its an demo we have used low level of vibration and noise
+  This can be changed based on the 
+# 📢 Telegram Alerts with MicroPython
+
+This project demonstrates how to send alerts from a MicroPython device (Raspberry Pi Pico 2 W) directly to a Telegram chat using a bot.
+
+---
+
+## 🚀 Features
+- Real‑time alerts from your IoT device to Telegram
+- Simple MicroPython function for sending messages
+- Easy setup with BotFather and Telegram API
+
+---
+
+## 🛠️ Setup Instructions
+3. Look for `"chat":{"id":...}` in the JSON response.  
+That number is your **Chat ID**.
+
+---
+
+### 3. MicroPython Code Example
+
+Add this snippet to your MicroPython project:
+
+```python
+import urequests
+
+BOT_TOKEN = "YOUR_BOT_TOKEN"
+CHAT_ID = "YOUR_CHAT_ID"
+
+def send_telegram_alert(message):
+ url = "https://api.telegram.org/bot{}/sendMessage".format(BOT_TOKEN)
+ data = {"chat_id": CHAT_ID, "text": message}
+ try:
+     response = urequests.post(url, json=data)
+     response.close()
+ except Exception as e:
+     print("Error sending alert:", e)
+```
+# Example usage
+send_telegram_alert("🚨 Alert: Sensor threshold exceeded!")
+### 1. Create a Telegram Bot
+1. Open Telegram and search for **BotFather**.
+2. Start a chat and run the command:
 # Team Members
 * Anurag Shetty
 * Anvesh S Shetty
