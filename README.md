@@ -219,5 +219,9 @@
           send_telegram("🚨 Abnormal Noise detected!")
   
       sleep(1)
-
+```
+# Team Members
+* Anurag Shetty
+* Anvesh S Shetty
+* Dhanush D Shetty
 
