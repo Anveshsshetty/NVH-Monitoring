@@ -933,7 +933,7 @@ Future enhancements for the project include:
 
 # 👨‍💻 Author
 
-## **Anvesh Shetty**
+## **Anvesh Shetty,Anurag Shetty,Dhanush Shetty**
 
 **B.Tech – Electronics & Communication Engineering**
 
