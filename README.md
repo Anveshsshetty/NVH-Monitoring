@@ -846,7 +846,7 @@ This project was developed as part of an L&T EduTech project and was successfull
   <img src="Schematic/Certificate.png" width="750">
 </p>
 <p align="center">
-  <img src="Schematic/Certificate_Anurag.png" width="750">
+  <img src="Schematic/Certificate_Anurag.jpg" width="750">
 </p>
 <p align="center">
   <p align="center">
