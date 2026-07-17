@@ -850,7 +850,7 @@ This project was developed as part of an L&T EduTech project and was successfull
 </p>
 <p align="center">
   <p align="center">
-  <img src="Schematic/Certificate_Dhanush.jpg.jpeg" width="600">
+  <img src="Schematic/Certificate_Dhanush.png" width="600">
 </p>
 <b>Project Completion Certificate</b>
 </p>
