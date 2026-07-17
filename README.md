@@ -845,8 +845,13 @@ This project was developed as part of an L&T EduTech project and was successfull
 <p align="center">
   <img src="Schematic/Certificate.png" width="750">
 </p>
-
 <p align="center">
+  <img src="Schematic/Certificate_Anurag.png" width="750">
+</p>
+<p align="center">
+  <p align="center">
+  <img src="Schematic/Certificate_Dhanush.png" width="750">
+</p>
 <b>Project Completion Certificate</b>
 </p>
 
