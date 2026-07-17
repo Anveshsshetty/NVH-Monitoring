@@ -663,3 +663,278 @@ The system should
 - Check internet connectivity.
 
 ---
+
+# 📸 Project Gallery
+
+The following images showcase different aspects of the project, including the hardware setup, cloud dashboard, serial output, and Telegram notifications.
+
+<table align="center">
+
+<tr>
+<td align="center">
+<img src="Schematic/Circuit_Diagram.jpg" width="320"><br>
+<b>🔌 Circuit Diagram</b>
+</td>
+
+<td align="center">
+<img src="Schematic/Circuit_on.jpg" width="320"><br>
+<b>💡 Hardware Setup (Powered ON)</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="Schematic/Circuit_off.jpg" width="320"><br>
+<b>⚡ Hardware Setup (Powered OFF)</b>
+</td>
+
+<td align="center">
+<img src="Schematic/Thingspeak.png" width="320"><br>
+<b>☁ ThingSpeak Dashboard</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="Schematic/Serial_Monitor.png" width="320"><br>
+<b>💻 Serial Monitor Output</b>
+</td>
+
+<td align="center">
+<img src="Schematic/Telegram.jpeg" width="320"><br>
+<b>📱 Telegram Alert Notification</b>
+</td>
+</tr>
+
+</table>
+
+---
+
+# 🎥 Demonstration Video
+
+A complete demonstration of the project is available in this repository.
+
+📹 **Demo Video**
+
+```
+Schematic/Demo_Video.mp4
+```
+
+The demonstration includes:
+
+- Raspberry Pi Pico W boot sequence
+- Wi-Fi connection
+- Live OLED display
+- Vibration monitoring
+- Noise monitoring
+- ThingSpeak cloud updates
+- Telegram notifications
+- LED and buzzer activation
+
+---
+
+# ⚙️ Working Principle
+
+The NVH Monitoring System continuously acquires vibration and sound data from the connected sensors.
+
+The Raspberry Pi Pico W processes the sensor readings and compares them against predefined threshold values.
+
+Whenever an abnormal vibration or noise level is detected, the system performs the following actions simultaneously:
+
+- 🚨 Activates the LED
+- 🔊 Activates the buzzer
+- ☁ Uploads the sensor values to ThingSpeak
+- 📱 Sends an instant Telegram notification
+
+This enables continuous real-time monitoring of machine health and allows users to receive alerts remotely.
+
+---
+
+# 📈 System Workflow
+
+```
+           Start
+             │
+             ▼
+ Initialize Raspberry Pi Pico W
+             │
+             ▼
+     Initialize Sensors
+             │
+             ▼
+      Connect to Wi-Fi
+             │
+             ▼
+ Read Vibration & Sound Data
+             │
+             ▼
+ Display Data on OLED
+             │
+             ▼
+ Upload Data to ThingSpeak
+             │
+             ▼
+  Threshold Exceeded?
+        │         │
+       No        Yes
+        │         │
+        ▼         ▼
+ Continue   LED + Buzzer ON
+                  │
+                  ▼
+        Send Telegram Alert
+                  │
+                  ▼
+        Continue Monitoring
+```
+
+---
+
+# ⚠️ Challenges Faced
+
+## 1️⃣ False Noise Detection due to the Buzzer
+
+### Problem
+
+Initially, whenever the buzzer was activated to indicate an abnormal condition, the **sound sensor detected the buzzer's own sound**.
+
+This created a feedback loop:
+
+```
+High Noise Detected
+        │
+        ▼
+Buzzer Turns ON
+        │
+        ▼
+Sound Sensor Detects Buzzer Sound
+        │
+        ▼
+Noise Value Increases Again
+        │
+        ▼
+Repeated Alerts
+```
+
+As a result,
+
+- Multiple unnecessary Telegram notifications were generated.
+- Noise readings became inaccurate.
+- The system continued triggering itself even after the original noise source disappeared.
+
+---
+
+### Solution
+
+A software-based solution was implemented.
+
+Whenever the buzzer is activated,
+
+- 🔇 Sound sensor readings are temporarily disabled.
+- 📊 Vibration monitoring continues normally.
+- ⏱️ After the buzzer turns OFF, sound monitoring resumes automatically.
+
+This prevents the sensor from detecting the buzzer's own sound while still allowing accurate monitoring of external machine noise.
+
+---
+
+### Outcome
+
+✅ Eliminated false triggering.
+
+✅ Prevented repeated Telegram notifications.
+
+✅ Improved measurement accuracy.
+
+✅ Increased overall system stability and reliability.
+
+---
+
+# 📊 Results
+
+The developed system successfully achieved the following objectives:
+
+- ✅ Real-time vibration monitoring
+- ✅ Real-time sound monitoring
+- ✅ OLED display of live sensor readings
+- ✅ Wi-Fi connectivity using Raspberry Pi Pico W
+- ✅ Cloud data logging using ThingSpeak
+- ✅ Instant Telegram notifications
+- ✅ Local LED and buzzer alerts
+- ✅ Continuous machine health monitoring
+
+The project demonstrates a low-cost IoT solution suitable for industrial condition monitoring and predictive maintenance applications.
+
+---
+
+# 💡 Key Learning Outcomes
+
+Through this project, the following skills and concepts were learned:
+
+- Raspberry Pi Pico W programming using MicroPython
+- Sensor interfacing (I2C & ADC)
+- OLED display communication
+- Wi-Fi networking on embedded systems
+- ThingSpeak cloud integration
+- Telegram Bot API integration
+- Real-time embedded programming
+- IoT-based monitoring systems
+- Sensor data processing
+- Debugging hardware-software interaction
+
+---
+
+# 🔮 Future Improvements
+
+Future enhancements for the project include:
+
+- 🤖 Machine Learning based fault prediction
+- 📈 FFT vibration spectrum analysis
+- 📱 Android application for remote monitoring
+- 🌐 Web dashboard
+- 📧 Email notifications
+- 💾 SD Card data logging
+- 🔋 Battery backup support
+- 🏭 Monitoring multiple industrial machines
+- 📡 MQTT communication
+- 📊 Advanced analytics dashboard
+
+---
+
+# 📚 References
+
+- Raspberry Pi Pico W Documentation
+- MicroPython Documentation
+- MPU6050 Datasheet
+- SH1106 OLED Documentation
+- ThingSpeak Documentation
+- Telegram Bot API Documentation
+
+---
+
+# 👨‍💻 Author
+
+## **Anvesh Shetty**
+
+**B.Tech – Electronics & Communication Engineering**
+
+### Technical Skills
+
+- Embedded Systems
+- Internet of Things (IoT)
+- Raspberry Pi Pico W
+- MicroPython
+- Python
+- Electronics
+- Sensor Interfacing
+- Cloud Integration
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project helpful, please consider giving it a Star!
+
+Thank you for visiting this repository.
+
+</div>
