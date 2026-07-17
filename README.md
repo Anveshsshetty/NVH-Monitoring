@@ -843,14 +843,14 @@ This prevents the sensor from detecting the buzzer's own sound while still allow
 This project was developed as part of an L&T EduTech project and was successfully completed with the following certification.
 
 <p align="center">
-  <img src="Schematic/Certificate.png" width="750">
+  <img src="Schematic/Certificate.png" width="600">
 </p>
 <p align="center">
-  <img src="Schematic/Certificate_Anurag.jpg" width="750">
+  <img src="Schematic/Certificate_Anurag.jpg" width="600">
 </p>
 <p align="center">
   <p align="center">
-  <img src="Schematic/Certificate_Dhanush.jpg.jpeg" width="750">
+  <img src="Schematic/Certificate_Dhanush.jpg.jpeg" width="600">
 </p>
 <b>Project Completion Certificate</b>
 </p>
@@ -933,7 +933,7 @@ Future enhancements for the project include:
 
 # 👨‍💻 Author
 
-## **Anvesh Shetty,Anurag Shetty,Dhanush Shetty**
+## **Anvesh Shetty, Anurag Shetty, Dhanush Shetty**
 
 **B.Tech – Electronics & Communication Engineering**
 
