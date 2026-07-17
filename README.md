@@ -101,23 +101,23 @@ The system provides a low-cost, portable, and scalable solution suitable for pre
 ```
 NVH-Monitoring/
 │
-├── main.py
-├── imu.py
-├── sh1106.py
-├── vector3d.py
-│
-├── Circuit_Diagram.jpg
-├── Serial_Monitor.png
-├── ThingSpeak.png
-├── demo.mp4
+├── lib/
+│   ├── imu.py
+│   ├── sh1106.py
+│   └── vector3d.py
 │
 ├── Schematic/
-│   ├── circuit.jpg
-│   ├── circuit2.jpg
-│   └── ...
+│   ├── Certificate.jpg
+│   ├── Circuit_on.jpg
+│   ├── Circuit_off.jpg
+│   ├── Circuit_Diagram.jpg
+│   ├── Serial_Monitor.png
+│   ├── ThingSpeak.png
+│   ├── Telegram.png
+│   └── Demo_Video.mp4
 │
 ├── README.md
-└── LICENSE
+└── main.py
 ```
 
 ---
@@ -128,7 +128,7 @@ NVH-Monitoring/
                  MPU6050
                     │
                     ▼
-        Raspberry Pi Pico W
+           Raspberry Pi Pico W
                     │
       ┌─────────────┼──────────────┐
       │             │              │
@@ -701,7 +701,7 @@ The following images showcase different aspects of the project, including the ha
 </td>
 
 <td align="center">
-<img src="Schematic/Telegram.jpeg" width="320"><br>
+<img src="Schematic/Telegram.png" width="320"><br>
 <b>📱 Telegram Alert Notification</b>
 </td>
 </tr>
@@ -835,6 +835,20 @@ Whenever the buzzer is activated,
 - ⏱️ After the buzzer turns OFF, sound monitoring resumes automatically.
 
 This prevents the sensor from detecting the buzzer's own sound while still allowing accurate monitoring of external machine noise.
+
+---
+
+# 🏆 Certificate
+
+This project was developed as part of an L&T EduTech project and was successfully completed with the following certification.
+
+<p align="center">
+  <img src="Schematic/Certificate.png" width="750">
+</p>
+
+<p align="center">
+<b>Project Completion Certificate</b>
+</p>
 
 ---
 
